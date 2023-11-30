@@ -10,7 +10,7 @@ bot(
 	async (message, match) => {
 		const key = 'BING_COOKIE'
 		if (!match)
-			return await message.send(`*Example : setcookie copied_cookie*/ntutorial video https://vimeo.com/889940327?share=copy`)
+			return await message.send(`*Example : setcookie copied_cookie*\ntutorial video https://vimeo.com/889940327?share=copy`)
 		await setVar({ [key]: match })
 		await message.send(`_new var ${key} added as ${match}_`)
 	}
