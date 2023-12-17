@@ -15,19 +15,3 @@ bot(
 		await message.send(`_new var ${key} added as ${match}_`)
 	}
 )
-bot(
-  {
-    pattern: 'getcookie ?(.*)',
-    fromMe: true,
-    desc: 'show cookie',
-    type: 'vars',
-  },
-  async (message, match) => {
-    try {
-      const vars = await getVars()
-      await message.send('```' + `Bing cookie is : ${vars.BING_COOKIE}` + '```')
-    } catch (error) {
-      return await message.send(error.message, { quoted: message.data })
-    }
-  }
-)
